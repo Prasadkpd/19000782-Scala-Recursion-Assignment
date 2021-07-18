@@ -7,7 +7,7 @@ import scala.io.StdIn.readInt;
 object Q5{
 
     def isEven(m:Int): Boolean=m match{
-        	case 0 => true
+        case 0 => true
 		case _ => isOdd(m-1)
    	}
 	

@@ -6,15 +6,25 @@ import scala.io.StdIn.readInt;
 
 object Q4{
 
-    def iseven_odd(a:Int):Unit = a match{
-        case x if(x%2)>0 => println("This is a Odd number")
-        case _ => println("This is a Even Number")
-    }
-   
-    def main(args:Array[String]){
-        var input = new Scanner(System.in);
-        println("Enter the number want to check even or Odd:");
-        val num = input.nextInt();
-        iseven_odd(num);
-    }
+    def isEven(m:Int): Boolean=m match{
+        case 0 => true
+		case _ => isOdd(m-1)
+   	}
+	
+	def isOdd(m:Int): Boolean={
+     	!(isEven(m)) 
+   	}
+
+	def main(args:Array[String]){
+		
+		var input = new Scanner (System.in);
+		println("Determine given number is odd or even");
+		print("Enter the number :");
+		val num=input.nextInt();
+
+		if(isOdd(num))
+			println("Odd");
+		else
+			println("Even");
+	}
 } 

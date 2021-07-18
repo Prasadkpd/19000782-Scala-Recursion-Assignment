@@ -8,3 +8,24 @@ INFO: Unsupported notification method: $/setTrace
 [0m2021.07.18 19:44:39 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
 [0m2021.07.18 19:44:41 INFO  time: code lens generation in 3.78s[0m
 [0m2021.07.18 19:48:15 INFO  shutting down Metals[0m
+[0m2021.07.18 19:59:31 INFO  Started: Metals version 0.10.5 in workspace 'E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment' for client Visual Studio Code 1.58.2.[0m
+[0m2021.07.18 19:59:32 INFO  time: initialize in 1.04s[0m
+[0m2021.07.18 19:59:34 WARN  Build server is not auto-connectable.[0m
+[0m2021.07.18 19:59:34 WARN  no build tool detected in workspace 'E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.07.18 19:59:34 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q6.scala[0m
+[0m2021.07.18 19:59:34 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q1.scala[0m
+[0m2021.07.18 19:59:38 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.07.18 19:59:43 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q1.scala[0m
+[0m2021.07.18 19:59:43 INFO  time: code lens generation in 1.41s[0m
+[0m2021.07.18 19:59:43 INFO  time: code lens generation in 2.31s[0m
+[0m2021.07.18 19:59:43 INFO  time: code lens generation in 2.9s[0m
+[0m2021.07.18 19:59:43 INFO  time: code lens generation in 8.28s[0m
+[0m2021.07.18 20:00:02 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q1.scala[0m
+[0m2021.07.18 20:00:39 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q2.scala[0m
+[0m2021.07.18 20:01:23 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q3.scala[0m
+[0m2021.07.18 20:02:02 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q4.scala[0m
+[0m2021.07.18 20:03:00 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q5.scala[0m
+Jul 18, 2021 8:03:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 80
+Jul 18, 2021 8:04:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
