@@ -7,3 +7,4 @@ Jul 18, 2021 7:44:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notif
 INFO: Unsupported notification method: $/setTrace
 [0m2021.07.18 19:44:39 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
 [0m2021.07.18 19:44:41 INFO  time: code lens generation in 3.78s[0m
+[0m2021.07.18 19:48:15 INFO  shutting down Metals[0m

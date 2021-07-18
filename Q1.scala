@@ -9,7 +9,7 @@ object Q1{
     def GCD(a:Int,b:Int):Int = b match{
         case 0 => a
         case x if x>a => GCD(x,a)
-        case _ => GCD(x,a%x)
+        case _ => GCD(b,a%b)
     }
 
     def prime(a:Int, b:Int=2):Boolean = b match{
