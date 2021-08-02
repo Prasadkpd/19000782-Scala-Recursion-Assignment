@@ -17,10 +17,10 @@ object Q4{
 
 	def main(args:Array[String]){
 		
-		var input = new Scanner (System.in);
+		
 		println("Determine given number is odd or even");
 		print("Enter the number :");
-		val num=input.nextInt();
+		val num=scala.io.StdIn.readInt();
 
 		if(isOdd(num))
 			println("Odd");

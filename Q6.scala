@@ -1,7 +1,6 @@
 //19000782
 //Q6
 
-import java.util.Scanner;
 import scala.io.StdIn.readInt;
 
 object Q6{
@@ -20,9 +19,9 @@ object Q6{
     }
 
     def main(args:Array[String]){
-        var input = new Scanner(System.in);
+       
         println("Enter the number:");
-        val num = input.nextInt();
+        val num = scala.io.StdIn.readInt();
         fibonacaiSeq(num);
     }
 } 

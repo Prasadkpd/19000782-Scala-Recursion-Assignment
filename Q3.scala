@@ -1,7 +1,6 @@
 //19000782
 //Q3
 
-import java.util.Scanner;
 import scala.io.StdIn.readInt;
 
 object Q3{
@@ -11,9 +10,8 @@ object Q3{
         case x if(x>0) => sum((a-1),(b+a))
     }
     def main(args:Array[String]){
-        var input = new Scanner(System.in);
         print("Enter the number:");
-        val num = input.nextInt();
+        val num = scala.io.StdIn.readInt();
         print("The sum is ");
         print(sum(num));
     }

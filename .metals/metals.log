@@ -29,3 +29,1392 @@ Jul 18, 2021 8:03:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellat
 WARNING: Unmatched cancel notification for request id 80
 Jul 18, 2021 8:04:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+Jul 18, 2021 8:07:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 92
+Jul 18, 2021 8:08:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 101
+Jul 18, 2021 8:09:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 117
+[0m2021.07.18 20:09:41 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q5.scala[0m
+Jul 18, 2021 8:16:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 150
+Jul 18, 2021 8:52:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///d%3A/Downloads/question_04.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import java.util.Scanner;\r\nimport scala.io.StdIn.readInt;\r\n\r\nobject question_04{\r\n\r\n\tdef isEven(m:Int): Boolean\u003dm match{\r\n        \tcase 0 \u003d\u003e true\r\n\t\tcase _ \u003d\u003e isOdd(m-1)\r\n   \t}\r\n\t\r\n\tdef isOdd(m:Int): Boolean\u003d{\r\n     \t\t! (isEven(m)) \r\n   \t}\r\n\r\n\r\n\tdef main(args:Array[String]){\r\n\t\t\r\n\t\tvar input \u003d new Scanner (System.in);\r\n\t\tprint(\"Determine given number is odd or even\\n\");\r\n\t\tprint(\"Enter number :\");\r\n\t\tval num\u003dinput.nextInt();\r\n\r\n\t\tif(isOdd(num))\r\n\t\t\tprintln(\"Odd\");\r\n\t\telse\r\n\t\t\tprintln(\"Even\");\r\n\t}\r\n}\r\n\r\n"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.Compilations.expand(Compilations.scala:156)
+	at scala.meta.internal.metals.Compilations.compileFile(Compilations.scala:79)
+	at scala.meta.internal.metals.MetalsLanguageServer.didOpen(MetalsLanguageServer.scala:980)
+	... 16 more
+
+Jul 18, 2021 8:52:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.metals.codeactions.ExtractRenameMember.$anonfun$contribute$1(ExtractRenameMember.scala:44)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 18, 2021 8:52:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "file:///d%3A/Downloads/question_04.scala"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.MetalsLanguageServer.didFocus(MetalsLanguageServer.scala:1019)
+	... 16 more
+
+Jul 18, 2021 8:52:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.parsing.DocumentSymbolProvider.documentSymbols(DocumentSymbolProvider.scala:33)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$documentSymbol$1(MetalsLanguageServer.scala:1349)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 18, 2021 8:52:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedFor$1(FoldingRangeProvider.scala:31)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedFor(FoldingRangeProvider.scala:30)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$foldingRange$2(MetalsLanguageServer.scala:1518)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+[0m2021.07.18 20:52:57 ERROR text document: file:///D:/Downloads/question_04.scala
+java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.FileSystemSemanticdbs.textDocument(FileSystemSemanticdbs.scala:33)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$2(MetalsLanguageServer.scala:1507)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$1(MetalsLanguageServer.scala:1505)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(null)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(null)
+	at java.lang.Thread.run(null)
+[0m
+Jul 18, 2021 8:52:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.Compilers.fromBuildTarget$1(Compilers.scala:380)
+	at scala.meta.internal.metals.Compilers.loadCompiler(Compilers.scala:390)
+	at scala.meta.internal.metals.Compilers.withPCAndAdjustLsp(Compilers.scala:530)
+	at scala.meta.internal.metals.Compilers.hover(Compilers.scala:318)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$hover$1(MetalsLanguageServer.scala:1320)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.hover(MetalsLanguageServer.scala:1318)
+	... 15 more
+
+[0m2021.07.18 20:53:25 ERROR text document: file:///D:/Downloads/question_04.scala
+java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.FileSystemSemanticdbs.textDocument(FileSystemSemanticdbs.scala:33)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$2(MetalsLanguageServer.scala:1507)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$1(MetalsLanguageServer.scala:1505)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(null)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(null)
+	at java.lang.Thread.run(null)
+[0m
+Jul 18, 2021 8:53:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.Compilers.fromBuildTarget$1(Compilers.scala:380)
+	at scala.meta.internal.metals.Compilers.loadCompiler(Compilers.scala:390)
+	at scala.meta.internal.metals.Compilers.withPCAndAdjustLsp(Compilers.scala:530)
+	at scala.meta.internal.metals.Compilers.hover(Compilers.scala:318)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$hover$1(MetalsLanguageServer.scala:1320)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.hover(MetalsLanguageServer.scala:1318)
+	... 15 more
+
+Jul 18, 2021 8:53:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.parsing.DocumentSymbolProvider.documentSymbols(DocumentSymbolProvider.scala:33)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$documentSymbol$1(MetalsLanguageServer.scala:1349)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 18, 2021 8:53:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 174
+Jul 18, 2021 8:54:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.metals.codeactions.ExtractRenameMember.$anonfun$contribute$1(ExtractRenameMember.scala:44)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 18, 2021 8:54:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "file:///d%3A/Downloads/question_04.scala"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.MetalsLanguageServer.didFocus(MetalsLanguageServer.scala:1019)
+	... 16 more
+
+Jul 18, 2021 8:54:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 182
+Jul 18, 2021 8:54:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.parsing.DocumentSymbolProvider.documentSymbols(DocumentSymbolProvider.scala:33)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$documentSymbol$1(MetalsLanguageServer.scala:1349)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 18, 2021 8:54:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedFor$1(FoldingRangeProvider.scala:31)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedFor(FoldingRangeProvider.scala:30)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$foldingRange$2(MetalsLanguageServer.scala:1518)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+[0m2021.07.18 20:54:03 ERROR text document: file:///D:/Downloads/question_04.scala
+java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.FileSystemSemanticdbs.textDocument(FileSystemSemanticdbs.scala:33)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$2(MetalsLanguageServer.scala:1507)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$1(MetalsLanguageServer.scala:1505)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(null)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(null)
+	at java.lang.Thread.run(null)
+[0m
+Jul 18, 2021 8:54:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.Compilers.fromBuildTarget$1(Compilers.scala:380)
+	at scala.meta.internal.metals.Compilers.loadCompiler(Compilers.scala:390)
+	at scala.meta.internal.metals.Compilers.withPCAndAdjustLsp(Compilers.scala:530)
+	at scala.meta.internal.metals.Compilers.hover(Compilers.scala:318)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$hover$1(MetalsLanguageServer.scala:1320)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.hover(MetalsLanguageServer.scala:1318)
+	... 15 more
+
+Jul 18, 2021 8:54:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.Compilers.fromBuildTarget$1(Compilers.scala:380)
+	at scala.meta.internal.metals.Compilers.loadCompiler(Compilers.scala:390)
+	at scala.meta.internal.metals.Compilers.withPCAndAdjustLsp(Compilers.scala:530)
+	at scala.meta.internal.metals.Compilers.hover(Compilers.scala:318)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$hover$1(MetalsLanguageServer.scala:1320)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.hover(MetalsLanguageServer.scala:1318)
+	... 15 more
+
+[0m2021.07.18 20:54:07 ERROR text document: file:///D:/Downloads/question_04.scala
+java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.FileSystemSemanticdbs.textDocument(FileSystemSemanticdbs.scala:33)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.DocumentHighlightProvider.documentHighlight(DocumentHighlightProvider.scala:26)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$documentHighlights$1(MetalsLanguageServer.scala:1339)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(null)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(null)
+	at java.lang.Thread.run(null)
+[0m
+Jul 18, 2021 8:54:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.metals.codeactions.ExtractRenameMember.$anonfun$contribute$1(ExtractRenameMember.scala:44)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 18, 2021 8:54:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.Compilers.fromBuildTarget$1(Compilers.scala:380)
+	at scala.meta.internal.metals.Compilers.loadCompiler(Compilers.scala:390)
+	at scala.meta.internal.metals.Compilers.withPCAndAdjustLsp(Compilers.scala:530)
+	at scala.meta.internal.metals.Compilers.hover(Compilers.scala:318)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$hover$1(MetalsLanguageServer.scala:1320)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.hover(MetalsLanguageServer.scala:1318)
+	... 15 more
+
+Jul 18, 2021 8:54:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.metals.codeactions.ExtractRenameMember.$anonfun$contribute$1(ExtractRenameMember.scala:44)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 18, 2021 8:54:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.metals.codeactions.ExtractRenameMember.$anonfun$contribute$1(ExtractRenameMember.scala:44)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 18, 2021 8:54:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.metals.codeactions.ExtractRenameMember.$anonfun$contribute$1(ExtractRenameMember.scala:44)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 18, 2021 8:54:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.metals.codeactions.ExtractRenameMember.$anonfun$contribute$1(ExtractRenameMember.scala:44)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 18, 2021 8:54:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.parsing.DocumentSymbolProvider.documentSymbols(DocumentSymbolProvider.scala:33)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$documentSymbol$1(MetalsLanguageServer.scala:1349)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 18, 2021 8:54:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 196
+[0m2021.07.18 20:54:21 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q4.scala[0m
+[0m2021.07.18 20:54:24 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q4.scala[0m
+[0m2021.07.18 20:54:30 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q4.scala[0m
+[0m2021.07.18 20:54:33 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q4.scala[0m
+[0m2021.07.18 20:54:37 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q4.scala[0m
+[0m2021.07.18 20:54:45 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q4.scala[0m
+[0m2021.07.18 20:54:49 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q4.scala[0m
+[0m2021.07.18 20:54:58 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q4.scala[0m
+[0m2021.08.02 11:41:23 INFO  Started: Metals version 0.10.5 in workspace 'E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment' for client Visual Studio Code 1.58.2.[0m
+[0m2021.08.02 11:41:24 INFO  time: initialize in 0.77s[0m
+[0m2021.08.02 11:41:29 WARN  Build server is not auto-connectable.[0m
+[0m2021.08.02 11:41:29 WARN  no build tool detected in workspace 'E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.08.02 11:41:29 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q4.scala[0m
+Aug 02, 2021 11:41:29 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///d%3A/Downloads/question_04.scala",
+      "languageId": "scala",
+      "version": 1,
+      "text": "import java.util.Scanner;\r\nimport scala.io.StdIn.readInt;\r\n\r\nobject question_04{\r\n\r\n\tdef isEven(m:Int): Boolean\u003dm match{\r\n        \tcase 0 \u003d\u003e true\r\n\t\tcase _ \u003d\u003e isOdd(m-1)\r\n   \t}\r\n\t\r\n\tdef isOdd(m:Int): Boolean\u003d{\r\n     \t\t! (isEven(m)) \r\n   \t}\r\n\r\n\r\n\tdef main(args:Array[String]){\r\n\t\t\r\n\t\tvar input \u003d new Scanner (System.in);\r\n\t\tprint(\"Determine given number is odd or even\\n\");\r\n\t\tprint(\"Enter number :\");\r\n\t\tval num\u003dinput.nextInt();\r\n\r\n\t\tif(isOdd(num))\r\n\t\t\tprintln(\"Odd\");\r\n\t\telse\r\n\t\t\tprintln(\"Even\");\r\n\t}\r\n}\r\n\r\n"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.Compilations.expand(Compilations.scala:156)
+	at scala.meta.internal.metals.Compilations.compileFile(Compilations.scala:79)
+	at scala.meta.internal.metals.MetalsLanguageServer.didOpen(MetalsLanguageServer.scala:980)
+	... 16 more
+
+Aug 02, 2021 11:41:29 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.parsing.DocumentSymbolProvider.documentSymbols(DocumentSymbolProvider.scala:33)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$documentSymbol$1(MetalsLanguageServer.scala:1349)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+[0m2021.08.02 11:41:29 ERROR text document: file:///D:/Downloads/question_04.scala
+java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.FileSystemSemanticdbs.textDocument(FileSystemSemanticdbs.scala:33)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$2(MetalsLanguageServer.scala:1507)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$1(MetalsLanguageServer.scala:1505)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(null)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(null)
+	at java.lang.Thread.run(null)
+[0m
+Aug 02, 2021 11:41:30 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedFor$1(FoldingRangeProvider.scala:31)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedFor(FoldingRangeProvider.scala:30)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$foldingRange$2(MetalsLanguageServer.scala:1518)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+[0m2021.08.02 11:41:32 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.08.02 12:30:34 ERROR text document: file:///D:/Downloads/question_04.scala
+java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.FileSystemSemanticdbs.textDocument(FileSystemSemanticdbs.scala:33)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$2(MetalsLanguageServer.scala:1507)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$1(MetalsLanguageServer.scala:1505)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(null)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(null)
+	at java.lang.Thread.run(null)
+[0m
+Aug 02, 2021 12:30:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.parsing.DocumentSymbolProvider.documentSymbols(DocumentSymbolProvider.scala:33)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$documentSymbol$1(MetalsLanguageServer.scala:1349)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+[0m2021.08.02 12:30:41 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q1.scala[0m
+[0m2021.08.02 14:19:29 INFO  time: code lens generation in 1.01s[0m
+[0m2021.08.02 14:19:32 WARN  no build target for: E:\Academic\2nd Year\1st Semester\SCS2204 Functional Programming\Assignments\Recursion Assignment\Q2.scala[0m
+Aug 02, 2021 2:19:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "file:///d%3A/Downloads/question_04.scala"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.MetalsLanguageServer.didFocus(MetalsLanguageServer.scala:1019)
+	... 16 more
+
+Aug 02, 2021 2:19:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 48
+Aug 02, 2021 2:19:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.metals.codeactions.ExtractRenameMember.$anonfun$contribute$1(ExtractRenameMember.scala:44)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Aug 02, 2021 2:19:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.parsing.DocumentSymbolProvider.documentSymbols(DocumentSymbolProvider.scala:33)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$documentSymbol$1(MetalsLanguageServer.scala:1349)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Aug 02, 2021 2:19:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 'other' has different root
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 'other' has different root
+	at java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at sun.nio.fs.WindowsPath.relativize(Unknown Source)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.ScalaVersionSelector.dialectFromBuildTarget$1(ScalaVersionSelector.scala:58)
+	at scala.meta.internal.metals.ScalaVersionSelector.getDialect(ScalaVersionSelector.scala:64)
+	at scala.meta.internal.parsing.Trees.$anonfun$get$1(Trees.scala:35)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.parsing.Trees.get(Trees.scala:35)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedFor$1(FoldingRangeProvider.scala:31)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedFor(FoldingRangeProvider.scala:30)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$foldingRange$2(MetalsLanguageServer.scala:1518)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+[0m2021.08.02 14:19:40 ERROR text document: file:///D:/Downloads/question_04.scala
+java.lang.IllegalArgumentException: 'other' has different root
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at sun.nio.fs.WindowsPath.relativize(null)
+	at scala.meta.io.AbsolutePath.toRelative(AbsolutePath.scala:40)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionAbsolutePathBuffers.toRelativeInside(MetalsEnrichments.scala:280)
+	at scala.meta.internal.metals.BuildTargets.inferBuildTarget(BuildTargets.scala:302)
+	at scala.meta.internal.metals.BuildTargets.$anonfun$inverseSources$2(BuildTargets.scala:262)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.BuildTargets.inverseSources(BuildTargets.scala:262)
+	at scala.meta.internal.metals.FileSystemSemanticdbs.textDocument(FileSystemSemanticdbs.scala:33)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$2(MetalsLanguageServer.scala:1507)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$1(MetalsLanguageServer.scala:1505)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(null)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(null)
+	at java.lang.Thread.run(null)
+[0m
+[0m2021.08.02 14:20:53 INFO  shutting down Metals[0m

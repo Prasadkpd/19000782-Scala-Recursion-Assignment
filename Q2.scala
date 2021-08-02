@@ -1,7 +1,6 @@
 //19000782
 //Q2
 
-import java.util.Scanner;
 import scala.io.StdIn.readInt;
 
 object Q2{
@@ -26,9 +25,9 @@ object Q2{
 			println(a);
 	}
     def main(args:Array[String]){
-        var input = new Scanner(System.in);
-        println("Enter the number want to check is Prime:");
-        val num = input.nextInt();
+       
+        println("Enter the number to print PrimeSeq:");
+        val num = scala.io.StdIn.readInt();
         primeseq(num);
     }
 } 

@@ -22,9 +22,9 @@ object Q5{
 	}
 
     def main(args:Array[String]){
-        var input = new Scanner(System.in);
+       
         println("Enter the no:");
-        val num = input.nextInt();
+        val num =scala.io.StdIn.readInt();
         println(add(num));
     }
 } 
