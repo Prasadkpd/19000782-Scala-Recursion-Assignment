@@ -1,6 +1,6 @@
 //19000782
 //Q1
-
+//Can you write a recursive function prime(n) that returns true for a prime number and false for the other? 
 import scala.io.StdIn.readInt;
 
 object Q1{

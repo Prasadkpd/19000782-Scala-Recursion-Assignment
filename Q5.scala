@@ -1,7 +1,7 @@
 //19000782
 //Q5
+// Can you write a recursive function to get the addition of all even numbers less than given n.
 
-import java.util.Scanner;
 import scala.io.StdIn.readInt;
 
 object Q5{

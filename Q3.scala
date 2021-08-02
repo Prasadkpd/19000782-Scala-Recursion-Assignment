@@ -1,5 +1,6 @@
 //19000782
 //Q3
+//Can you write a recursive function returns the addition of numbers from1 to n?
 
 import scala.io.StdIn.readInt;
 

@@ -1,7 +1,7 @@
 //19000782
 //Q4
+//Can you write a recursive function to determine even and odd numbers? 
 
-import java.util.Scanner;
 import scala.io.StdIn.readInt;
 
 object Q4{

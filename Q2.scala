@@ -1,6 +1,6 @@
 //19000782
 //Q2
-
+//Can you write a recursive function primeSeq(n) that prints all 	prime number which less than n?
 import scala.io.StdIn.readInt;
 
 object Q2{
